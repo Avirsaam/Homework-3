@@ -32,9 +32,8 @@ if (inputString.Length != inputValueLenth)
 }
 else
 {
-    try
-    {
-        number = Convert.ToInt32(inputString);
+    if (int.TryParse(inputString, out number))
+    {        
         string strNot = "";
         
         for (int i = 0; i < inputValueLenth / 2; i++)
@@ -51,7 +50,7 @@ else
         }
         Console.WriteLine($"Введенное число{strNot} является полиндромом");
     }
-    catch
+    else
     {
         Console.WriteLine("Ошибка ввода - введите число");
     }    
