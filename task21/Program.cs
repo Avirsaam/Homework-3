@@ -36,15 +36,6 @@ for (int i = 0; i < numberOfPoints; i++)
     }
 }
 
-for (int i = 0; i < numberOfPoints; i++)
-{
-    Console.Write($"Точка {i + 1} координаты X, Y, Z: ");
-    for (int j = 0; j < numberOfCoordinates; j++)
-    {
-        Console.Write(pointsCoordinates[i,j]+", ");
-    }
-    Console.WriteLine();
-}
 
 double sum = 0;
 
@@ -54,8 +45,6 @@ for (int i = 0; i < numberOfCoordinates; i++)
 }
 
 Console.WriteLine ($"Расстояние между точками: {Math.Round(Math.Sqrt(sum), 2)}");
-
-
 
 
 
